@@ -1,0 +1,66 @@
+＃1   Constants and Variables
+
+  # Declaring Constants and Variables:
+let maximumNumberOfLoginAttempts = 10
+var currentLoginAttempt = 0
+
+  # Type Annotations:
+var red, green, blue: Double
+
+  # Printing Constants and Variables:
+var friendlyWelcome = "Hello!"
+print(friendlyWelcome)
+print("The current value of friendlyWelcome is \(friendlyWelcome)")
+
+#2  Semicolons
+However, semicolons are required if you want to write multiple separate statements on a single line:
+let cat = "🐱"; print(cat)
+
+#3 Integers
+Swift provides signed and unsigned integers in 8, 16, 32, and 64 bit forms. 
+In most cases, you don’t need to pick a specific size of integer to use in your code. Swift provides an additional integer type, Int, which has the same size as the current platform’s native word size:
+
+On a 32-bit platform, Int is the same size as Int32.
+On a 64-bit platform, Int is the same size as Int64.
+
+let minValue = UInt8.min  // minValue is equal to 0, and is of type UInt8 (unsigned Int)
+let maxValue = UInt8.max  // maxValue is equal to 255, and is of type UInt8 (unsigned Int)
+
+#4 Numeric Literals
+All of these integer literals have a decimal value of 17:
+
+let decimalInteger = 17
+let binaryInteger = 0b10001       // 17 in binary notation
+let octalInteger = 0o21           // 17 in octal notation
+let hexadecimalInteger = 0x11     // 17 in hexadecimal notation
+
+#5 Numeric Type Conversion
+  #Integer Conversion
+let twoThousand: UInt16 = 2_000
+let one: UInt8 = 1
+let twoThousandAndOne = twoThousand + UInt16(one)
+
+  #Integer and Floating-Point Conversion
+let three = 3
+let pointOneFourOneFiveNine = 0.14159
+let pi = Double(three) + pointOneFourOneFiveNine // pi equals 3.14159, and is inferred to be of type Double
+
+let integerPi = Int(pi) // integerPi equals 3, and is inferred to be of type Int
+
+#6 Type Aliases
+
+typealias AudioSample = UInt16
+var maxAmplitudeFound = AudioSample.min // maxAmplitudeFound is now 0.Here, AudioSample is defined as an alias for UInt16. Because it is an alias, the call to AudioSample.min actually calls UInt16.min, which provides an initial value of 0 for the maxAmplitudeFound variable.
+
+#7 Booleans
+Swift’s type safety prevents non-Boolean values from being substituted for Bool. The following example reports a compile-time error:
+let i = 1
+if i {
+    // this example will not compile, and will report an error
+}
+However, the alternative example below is valid:
+
+let i = 1
+if i == 1 {
+    // this example will compile successfully
+}
