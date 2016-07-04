@@ -1,0 +1,51 @@
+#1 Terminology
+
+Operators are unary, binary, or ternary
+
+#2 Assignment Operator
+
+#3 Arithmetic Operators
+
+Swift supports the four standard arithmetic operators for all number types:
+Addition (+)
+Subtraction (-)
+Multiplication (*)
+Division (/)
+Remainder Operator (a % b)
+You can fit two 4s inside 9, and the remainder is 1.
+In Swift, this would be written as:
+9 % 4    // equals 1
+Floating-Point Remainder Calculations
+8 % 2.5   // equals 0.5
+In this example, 8 divided by 2.5 equals 3, with a remainder of 0.5, so the remainder operator returns a Double value of 0.5.
+
+#4 
+You can also compare tuples that have the same number of values, as long as each of the values in the tuple can be compared. For example, both Int and String can be compared, which means tuples of the type (Int, String) can be compared. In contrast, Bool can’t be compared, which means tuples that contain a Boolean value can’t be compared.
+
+Tuples are compared from left to right, one value at a time, until the comparison finds two values that aren’t equal. If all the elements are equal, then the tuples themselves are equal. For example:
+
+(1, "zebra") < (2, "apple")   // true because 1 is less than 2
+(3, "apple") < (3, "bird")    // true because 3 is equal to 3, and "apple" is less than "bird"
+(4, "dog") == (4, "dog")      // true because 4 is equal to 4, and "dog" is equal to "dog"
+
+#5 Ternary Conditional Operator
+question ? answer1 : answer2
+
+#6 Nil Coalescing Operator
+
+The nil coalescing operator (a ?? b) unwraps an optional a if it contains a value, or returns a default value b if a is nil. The expression a is always of an optional type. The expression b must match the type that is stored inside a.
+The nil coalescing operator is shorthand for the code below:
+a != nil ? a! : b
+
+#7 Range Operators
+
+Swift includes two range operators, which are shortcuts for expressing a range of values.
+
+The closed range operator 
+for index in 1...5 {
+    print("\(index) times 5 is \(index * 5)")
+}
+The half-open range operator (a..<b) 
+for i in 0..<count {
+    print("Person \(i + 1) is called \(names[i])")
+}
