@@ -138,7 +138,7 @@ namesOfIntegers = [:]
 
 # Creating a Dictionary with a Dictionary Literal
 The example below creates a dictionary to store the names of international airports. In this dictionary, the keys are three-letter International Air Transport Association codes, and the values are airport names:
-var airports:Dictionary<String: String> = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
+var airports:Dictionary<String, String> = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
 var airports: [String: String] = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
 var airports = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
 
